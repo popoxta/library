@@ -1,0 +1,95 @@
+.add-item {
+    background-color: #9ECECB;
+    color: #FAF9F9;
+    border: none;
+
+    font-size: 3rem;
+    text-align: left;
+
+    place-self: end;
+
+    height: 6.5rem;
+    width: 15rem;
+
+    padding-left: 3rem;
+}
+
+.library {
+    max-height: calc(100vh - 15rem);
+    overflow-y: auto;
+
+    padding: 5rem 12%;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 4rem;
+}
+
+.book {
+    background-color: white;
+
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding-top: 4rem;
+    min-height: 32rem;
+}
+
+.read {
+    background-color: #E3F5F1;
+}
+
+.read::after {
+    content: 'Read';
+}
+
+.not-read {
+    background-color: #F8F2F2;
+}
+
+.not-read::after {
+    content: 'Not Read';
+}
+
+.hidden {
+    display: none;
+}
+
+.book > h2 {
+    font-size: 3.3rem;
+    font-weight: normal;
+    margin: 1rem 0 0;
+}
+
+.book > h3 {
+    font-size: 2rem;
+    font-weight: normal;
+    margin: 0 0 1.5rem;
+}
+
+.book > hr {
+    min-width: 25%;
+    margin: 2rem;
+}
+
+.read, .not-read {
+    color: #555B6E;
+    font-size: 2rem;
+    border: none;
+
+    width: 11rem;
+    height: 5rem;
+
+    position: absolute;
+    bottom: 3rem;
+
+}
+
+.delete {
+    right: 1.5rem;
+    top: 1rem;
+}
+

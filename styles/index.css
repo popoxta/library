@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap');
+
+:root {
+    font-size: 8px;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: 'Merriweather', serif;
+}
+
+.main {
+    position: relative;
+}
+
+.delete, .close-form {
+    background-color: #FFD6BA;
+    border: none;
+    border-radius: 30px;
+
+    width: 3rem;
+    height: 3rem;
+
+    position: absolute;
+}
+
+.delete:hover, .close-form:hover {
+    filter: brightness(90%) saturate(140%);
+}
+
+button {
+    cursor: pointer;
+}
+
+.shadow {
+    box-shadow: 1px 6px 17px 2px rgba(0, 0, 0, 0.05);
+}
+
+@media only screen and (min-width: 768px) {
+    .header {
+        padding-left: 8rem;
+    }
+
+    .green-triangle {
+        left: -25rem;
+    }
+
+    .library {
+        padding: 8rem;
+
+        flex-direction: row;
+        flex-wrap: wrap;
+
+        justify-content: center;
+
+        gap: 6rem;
+    }
+
+    .book {
+        width: 40rem;
+    }
+}

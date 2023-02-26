@@ -1,0 +1,42 @@
+body {
+    background-color: #FAF9F9;
+
+    overflow: hidden;
+
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    background-color: #BEE3DB;
+
+    position: relative;
+    overflow: hidden;
+
+    display: flex;
+    justify-content: space-between;
+
+    height: 15rem;
+}
+
+.green-triangle {
+    background-color: #A7D3D1;
+
+    position: absolute;
+
+    width: 40rem;
+    height: 30rem;
+
+    left: -30rem;
+    transform: rotate(50deg);
+}
+
+h1 {
+    margin: 0;
+    font-size: 5.5rem;
+    align-self: center;
+
+    z-index: 1;
+
+    padding: 0 0 0 5rem;
+}

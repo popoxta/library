@@ -1,0 +1,32 @@
+.b-contain input {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+}
+
+.b-contain {
+    display: table;
+    position: relative;
+    left: -2.5rem;
+
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    cursor: pointer;
+}
+
+.b-contain input[type="checkbox"] ~ .b-input {
+    background: #f1f5f9;
+
+    border-radius: 5px;
+
+    position: absolute;
+    top: 1.3rem;
+    right: -5rem;
+
+    height: 3rem;
+    width: 3rem;
+}
+
+.b-contain input[type="checkbox"]:checked ~ .b-input {
+    background: #BEE3DB;
+}
