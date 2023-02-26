@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Library</title>
+
+    <link rel="stylesheet" href="styles/book-form.css">
+    <link rel="stylesheet" href="styles/custom-checkbox.css">
+    <link rel="stylesheet" href="styles/header.css">
+    <link rel="stylesheet" href="styles/library.css">
+    <link rel="stylesheet" href="styles/index.css">
+    <script src="script.js" defer></script>
+
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+
+</head>
+
+<body>
+
+<div class="header shadow">
+
+    <h1>LIBRARY</h1>
+    <button class="add-item">Add</button>
+    <div class="green-triangle"></div>
+
+</div>
+
+<div class="main">
+
+
+    <form class="book-form shadow hidden">
+        <div class="dark">
+            <button type="button" class="close-form"></button>
+        </div>
+
+        <label for="title"></label>
+        <input type="text" placeholder="Title" id="title" name="title" maxlength="25" required>
+
+        <label for="author"></label>
+        <input type="text" placeholder="Author" id="author" name="author" maxlength="40" required>
+
+        <label for="pages"></label>
+        <input type="number" placeholder="Pages" id="pages" name="pages" required>
+
+
+        <label for="read" class="b-contain">Read
+            <input type="checkbox" id="read" name="read">
+            <span class="b-input"></span>
+        </label>
+
+        <button type="submit" class="add-book">✓</button>
+
+    </form>
+
+
+    <div class="library">
+
+    </div>
+
+</div>
+</body>
+
+</html>
