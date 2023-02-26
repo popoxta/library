@@ -47,7 +47,7 @@ function drawLibrary() {
 
         deleteBtn.addEventListener("click", () => {
 
-            if (confirm("Are you sure?")) {
+            if (confirm("Are you sure you would like to delete this book?")) {
 
                 booksArray.splice(booksArray.indexOf(book), 1)
                 console.log(`Deleted ${book.name}`)
