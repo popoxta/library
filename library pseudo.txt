@@ -1,0 +1,100 @@
+Html;;;
+
+It requires;
+	A header
+		Fixed on top of screen
+		An add button on header
+
+	A body 
+		With scroll on y axis (if overflow)
+		Display flex? for unlimited items onto it
+
+	A Form
+		Two text inputs
+		Number input
+		Checkbox
+		Display Hidden by default :-)
+			
+
+
+Javascript;;;
+
+What we need;
+	Object/s
+	Event Listeners
+	Dom manip
+	
+OBJECT;
+	Object (title, author, pages, read status){
+		Title: string
+		Auhor: string
+		Pages: number
+		Read: boolean
+	}
+
+BOOKS ARRAY. [ obj1, obj2, obj3, etc ]
+
+
+We have a library, which has a FLEX? container ( .lib )
+This .lib is the parent container for all book items.
+
+Book items are stored within an array ( local storage / or just code idc )
+
+LOAD OBJ FUNCTION;;;
+
+		Remove .lib DOM children
+
+		redraw .lib DOM child elements from BOOKS ARRAY with a LOOP
+
+			flex item with h3? title, hr, author, pages.
+
+			a button for read/not read. ( READ BUTTON TOGGLE ) 
+				button reads from boolean value ( read on obj )
+				and css class changes depending on the value
+					.read or .not-read
+
+			a delete button ( REMOVE ITEM )
+
+
+
+SUBMIT ITEMS ;
+	on add button, event listener ( on click )
+		on click, unhide a form element ( blur everything else, fuckass )
+		
+		ON FORM (on submit ) 
+			event listener ( on submit )
+				append a new book item from form values to BOOKS ARRAY
+				call LOAD OBJ FUNCTION
+		
+		X button
+			hides form ( class (.hidden) )
+			clear fields
+				
+
+REMOVE ITEM ; ( x button on book obj )	
+
+ 	WHEN X BUTTON IS CREATED 
+		on x button, event listener ( on click )
+		bookobj = ( i ) ( as is created in loop in LOAD OBJ FUNC)
+
+			confirm( "ARE YOU SURE U WANT TO DELETE!?!?!" )	
+				if yes;
+					delete() from BOOKS ARRAY
+					call LOAD OBJ FUNCTION
+
+				if no;
+					return			
+		
+
+READ BUTTON TOGGLE ; ( read / not read button on book obj )	
+	
+	on click ( read button )
+
+		bookobj = ( i ) ( as is created in loop  in LOAD OBJ FUNC)
+			.read = true / false ( swap ) on book obj
+			update css class for display
+		
+	
+				
+
+		
