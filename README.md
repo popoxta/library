@@ -5,6 +5,8 @@
 A neat little library project for [TOP](https://www.theodinproject.com/)!
 This project was mainly focused on using objects in JavaScript.
 
+![image](preview.PNG)
+
 My main ( personal ) objectives in this task were to refine my planning and pseudocode skills.
 To accomplish this, I created a design via the use of Figma and drew diagrams for this project.
 
