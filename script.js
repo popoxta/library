@@ -6,6 +6,7 @@ class Book {
         this.status = status
     }
 }
+
 function getLocalStorage() {
     let books = JSON.parse(localStorage.getItem("booksArray"))
     if (!books) {
@@ -19,7 +20,7 @@ function getLocalStorage() {
     return books
 }
 
-function updateLocalStorage(){
+function updateLocalStorage() {
     localStorage.setItem("booksArray", JSON.stringify(booksArray))
 }
 
@@ -72,22 +73,21 @@ function drawLibrary() {
 function drawForms() {
     const openAddBookForm = document.querySelector(".add-item")
     const closeBookForm = document.querySelector(".close-form")
-    const addBookForm = document.querySelector(".book-form")
+    const bookForm = document.querySelector("form")
 
     openAddBookForm.addEventListener("click", () => toggleShowForm())
     closeBookForm.addEventListener("click", () => toggleShowForm())
 
     function toggleShowForm() {
-        addBookForm.classList.toggle('hidden')
-        addBookForm.classList.toggle('show')
-        addBookForm.reset()
+        bookForm.classList.toggle('hidden')
+        bookForm.classList.toggle('show')
+        bookForm.reset()
     }
 
-    addBookForm.addEventListener("submit", (e) => {
+    bookForm.addEventListener('submit', e => {
         e.preventDefault()
-        const values = e.target
-        const formData = new FormData(values)
 
+        const formData = new FormData(bookForm)
         const newBook = new Book(
             formData.get("title"),
             formData.get("author"),
@@ -95,13 +95,11 @@ function drawForms() {
             formData.get("read") === "on",
         )
         booksArray.push(newBook)
-
-        addBookForm.classList.replace("show", "hidden")
-        values.reset()
-
+        toggleShowForm()
         drawLibrary()
     })
 }
+
 let booksArray = getLocalStorage()
 drawForms()
 drawLibrary()
